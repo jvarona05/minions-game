@@ -1,0 +1,221 @@
+body {
+  font-family: 'Quicksand', sans-serif; 
+}
+
+/*** navbar ***/
+
+nav{
+  margin: 0 60px;
+}
+
+.logo{
+  width: 90px;
+}
+
+.navbar a{
+  color: black;
+}
+
+.navbar a:hover{
+  color: gray;
+  border-bottom: 1px solid gray;
+}
+
+@media (max-width: 992px) { 
+  nav{
+    margin: 0 10px;
+  }
+}
+
+/*** game - options ***/
+
+.game-option img{
+  width: 150px;
+}
+
+#options-container{
+  margin: 150px 0;
+}
+
+#options-container .circle{
+  padding: 50px;
+  background-color: #38c3ce;
+  height: 250px;
+  width: 250px;
+  border-radius: 120px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+#options-container .circle:hover{
+  background-color: #38b6c2;
+}
+
+@media (max-width: 992px) { 
+  #options-container{
+    margin: 10px 0;
+  }
+
+  #options-container .circle{
+    height: 150px;
+    width: 150px;
+    margin-bottom: 60px;
+  }
+
+  #options-container .circle :last-child{
+    margin-bottom: 10px;
+  }
+
+  .game-option img{
+    width: 50px;
+  }
+}
+
+/*** match - resume ***/
+
+#match-resume h3,
+#match-resume p{
+  width: 100%;
+  text-align: center;
+}
+
+#match-resume p{
+  color: #38c3cd;
+  font-size: 1.5em;
+}
+
+/*** modal - welcome ***/
+
+.modal-content .welcome-container h1{
+  text-align: center;
+  margin-top: 25%;
+  margin-bottom: 25px;
+}
+
+.modal-content .welcome-container p{
+  text-align: center;
+  font-size: 1.5em;
+}
+
+/*** modal - result ***/
+
+.modal-content .result{
+  padding: 0 150px;
+  margin-top: 160px;
+  width: 100%;
+}
+
+.modal-content .result h3{
+  padding-top: 20px;
+}
+
+.modal-content .result [class*="col-"]{
+  text-align: center;
+  margin: 0 30px;
+}
+
+.result img{
+  width: 80px;
+}
+
+.result .winner{
+  width: 150px;
+  margin-top: -40px
+}
+
+/*** modal - message ***/
+
+.modal-content .message{
+  text-align: center;
+}
+
+.modal-content .message h1{
+    margin-bottom: 20px;
+    margin-top: 8%;
+    font-size: 5em;
+}
+
+.modal-content .message h2{
+    margin-bottom: 55px;
+}
+
+.modal-content .message .minion{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/*** modal - buttons ***/
+
+.modal-overlay.active .modal-buttons button{
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 40px;
+  line-height: 16px;
+  font-weight: normal;
+  padding: 20px;
+  color: white;
+  border: 0;
+  border-radius: 100px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  transition: background 300ms ease-out;
+  width: 130px;
+  height: 130px;
+  margin: 0 30px;
+}
+
+.modal-overlay.active .modal-buttons .continue-game{
+  background-color: #76ff03;
+}
+
+.modal-overlay.active .modal-buttons .continue-game:hover{
+  background-color: #5fca02;
+}
+
+.modal-overlay.active .modal-buttons .end-game{
+  background-color: #ff3d00;
+}
+
+.modal-overlay.active .modal-buttons .end-game:hover{
+  background-color: #cc3100;
+}
+
+/*** about ***/
+
+.about-img{
+  height: 600px;
+}
+
+/*** modal - mobil size ***/
+
+@media (max-width: 992px) { 
+  .modal-content .message .minion{
+    display: none;
+  }
+
+  .modal-content .result{
+    display: none;
+  }
+
+  .modal-overlay.active .modal-buttons button{
+    margin-bottom: 50px;
+  }
+}
+
+/*** footer ***/
+
+footer .copyright{
+  text-align: center;
+}
+
+.sweet-modal-content .minion{
+  width: 60%;
+}
+
+.sweet-modal-box{
+  margin-top: -300px !important;  
+}
+
+.sweet-modal-box .result{
+  margin: 52px 0;
+}
