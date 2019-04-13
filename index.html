@@ -14,14 +14,10 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/jquery.sweet-modal.min.css" />
     <link rel="stylesheet" type="text/css" href="css/modal.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
-    <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  
-    <link rel="stylesheet" href="css/jquery.sweet-modal.min.css" />
-    <script src="js/jquery.sweet-modal.min.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
@@ -37,7 +33,7 @@
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
-        </ul><!-- and navbar options -->
+        </ul><!-- end navbar options -->
       </div>
     </nav><!-- end navbar -->
 
@@ -47,17 +43,17 @@
           <div class="circle mx-auto d-block">
             <img src="images/rock.svg" class="mx-auto d-block">
           </div>
-        </div>
+        </div><!-- end rock container -->
         <div class="col-sm game-option" data-option="paper">
           <div class="circle mx-auto d-block">
             <img src="images/paper.svg" class="mx-auto d-block">
           </div>
-        </div>
+        </div><!-- end paper container -->
         <div class="col-sm game-option" data-option="scissor">
           <div class="circle mx-auto d-block">
             <img src="images/scissor.svg" class="mx-auto d-block">
           </div>
-        </div>
+        </div><!-- end scissor container -->
       </div>
     </div><!-- end options container -->
 
@@ -74,53 +70,13 @@
       </div>
     </div><!-- end match resume -->
 
-    <!-- start modals section -->
-
-    <div id="modal-triggers">
-      <input class="welcome" type="hidden" data-modal="element" data-content="#welcome-modal">
-      <input class="result" type="hidden" data-modal="element" data-content="#result-modal">
-    </div><!-- end modal triggers -->
-
-    <div id="welcome-modal" class="modal">
-      <div class="welcome-container">
-        <h1>Hi, do you want to play with the minions?</h1>
-        <p>To play rock, paper and scissor you just have to click an option and enjoy the game.</p>
-      </div>
-    </div><!-- end welcome modal -->
-
-    <div id="result-modal" class="modal">
-      <div class="result">
-        <div class="row">
-          <div class="col-sm">
-            <h3>You</h3>
-          </div>
-          <div class="col-sm">
-            <img class="user-option" src="">
-          </div>
-          <div class="col-sm">
-            <img  class="minions-option" src="">
-          </div>
-          <div class="col-sm">
-            <h3>PC</h3>
-          </div>
-        </div>
-      </div><!-- end result -->
-
-      <div class="message">
-        <h1><!-- load by JS --></h1>
-        <h2>continue?</h2>
-        <img class="minion" src="">
-      </div>
-    </div><!-- end result modal -->
-
-    <!-- end modals section -->
-
     <footer>
       <p class="copyright">&copy; All Rights Reserved</p>
     </footer>
 
     <!-- JS -->
-    <script src="js/modal.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/jquery.sweet-modal.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>
