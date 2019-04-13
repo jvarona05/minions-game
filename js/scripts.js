@@ -45,33 +45,70 @@ $( document ).ready(function() {
   {
     title = modalTitles[result]
 
-    let html = `<div class="result">
-        <div class="row">
-          <div class="col-sm">
-            <h3>You</h3>
-          </div>
-          <div class="col-sm">
-            <img id="user-option" src="images/${userOption}.svg">
-          </div>
-          <div class="col-sm">
-            <img id="minions-option" src="images/${opponentOption}.svg">
-          </div>
-          <div class="col-sm">
-            <h3>PC</h3>
-          </div>
-        </div>
-      </div><!-- end result -->
+    displayWidth = $(window).width()
 
-      <div class="message">
-        <h1>${title}</h1>
-        <img class="minion" src="images/minions/${result}.png">
-      </div>`
+    html = getModalHTML(displayWidth, title, result, userOption, opponentOption)
 
     $.sweetModal({
       content: html
     });
 
-    $(getWinner(result)).addClass('winner')
+    if(displayWidth > 660)
+    {
+      $(getWinner(result)).addClass('winner')
+    }
+  }
+
+  function getModalHTML(displayWidth, title, result, userOption, opponentOption) 
+  {
+    if(displayWidth > 660)
+    {
+      html = `
+          <div class="result">
+            <div class="row">
+              <div class="col-sm">
+                <h3>You</h3>
+              </div>
+              <div class="col-sm">
+                <img id="user-option" src="images/${userOption}.svg">
+              </div>
+              <div class="col-sm">
+                <img id="minions-option" src="images/${opponentOption}.svg">
+              </div>
+              <div class="col-sm">
+                <h3>PC</h3>
+              </div>
+            </div>
+          </div><!-- end result -->
+
+          <div class="message">
+            <h1>${title}</h1>
+            <img class="minion" src="images/minions/${result}.png">
+          </div>`
+    }
+    else
+    {
+      html = `
+        <div class="result">
+          <div class="row">
+            <div class="col-6">
+              <h3>You</h3>
+              <img id="user-option" src="images/${userOption}.svg">
+            </div>
+            <div class="col-6">
+              <h3>PC</h3>
+              <img id="minions-option" src="images/${opponentOption}.svg">
+            </div>
+          </div>
+        </div><!-- end result -->
+
+        <div class="message">
+          <h1>${title}</h1>
+          <img class="minion" src="images/minions/${result}.png">
+        </div>`
+    }
+    
+    return html   
   }
 
   //return the selector of the winner in the modal
