@@ -121,5 +121,12 @@ $( document ).ready(function() {
     }
   }
 
-  // $(`#modal-triggers .welcome`).trigger('click')
+  $.sweetModal({
+      content: `
+        <div id="welcome-modal">
+          <h1>Hi, do you want to play with the minions?</h1>
+          <p>To play rock, paper and scissor you just have to <i><b>click an icon</b></i> and enjoy the game.</p>
+          <img class="minion" src="images/minions/hi.png">
+        </div>`
+    });
 });
