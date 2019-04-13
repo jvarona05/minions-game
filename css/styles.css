@@ -216,11 +216,7 @@ footer .copyright{
   margin-top: -280px !important;  
 }
 
-@media (max-width: 660px) { 
-  .sweet-modal-box{
-    margin-top: 0 !important;  
-  }
-}
+
 
 .sweet-modal-box .result{
   margin: 52px 0;
@@ -228,4 +224,20 @@ footer .copyright{
 
 #welcome-modal p{
   margin: 40px 0;
+}
+
+@media (max-width: 660px) { 
+  .sweet-modal-box{
+    margin-top: 0 !important;  
+  }
+
+  .nav-link{
+    text-align: center;
+    border: 0 !important;
+  }
+
+  .about-img{
+    height: auto;
+    width: 100%;
+  }
 }
