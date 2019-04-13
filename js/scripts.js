@@ -9,6 +9,8 @@ $( document ).ready(function() {
   var winCounter = 0
   var loseCounter = 0
 
+  displayWelcomeModal()
+
   //when the user select paper, rock or scissor
   $(document).on('click', '.game-option', function() {
 
@@ -121,12 +123,20 @@ $( document ).ready(function() {
     }
   }
 
-  $.sweetModal({
-      content: `
-        <div id="welcome-modal">
-          <h1>Hi, do you want to play with the minions?</h1>
-          <p>To play rock, paper and scissor you just have to <i><b>click an icon</b></i> and enjoy the game.</p>
-          <img class="minion" src="images/minions/hi.png">
-        </div>`
-    });
+  function displayWelcomeModal() 
+  {
+    if(sessionStorage.getItem("isNew") == null)
+    {
+      $.sweetModal({
+        content: `
+          <div id="welcome-modal">
+            <h1>Hi, do you want to play with the minions?</h1>
+            <p>To play rock, paper and scissor you just have to <i><b>click an icon</b></i> and enjoy the game.</p>
+            <img class="minion" src="images/minions/hi.png">
+          </div>`
+      });
+
+      sessionStorage.setItem("isNew", true);
+    }
+  }
 });
